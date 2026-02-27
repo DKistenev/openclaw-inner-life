@@ -1,0 +1,57 @@
+{
+  "myHabits": [
+    {
+      "trigger": "cron error",
+      "action": "check gateway.env + auth-profiles before deep-diving",
+      "strength": 4,
+      "formed": "2026-02-20",
+      "note": "80% of problems are missing keys or cooldown"
+    },
+    {
+      "trigger": "Brain Loop start",
+      "action": "check email before anything else",
+      "strength": 3,
+      "formed": "2026-02-20",
+      "note": "User asks about email at start of conversation"
+    }
+  ],
+  "userPatterns": [
+    {
+      "pattern": "Prefers short reports",
+      "confidence": 0.8,
+      "observations": 15,
+      "lastSeen": "2026-02-27"
+    },
+    {
+      "pattern": "When asks 'check?' — wants quick answer",
+      "confidence": 0.7,
+      "observations": 5,
+      "lastSeen": "2026-02-27"
+    },
+    {
+      "pattern": "Active in evenings MSK, rarely in mornings",
+      "confidence": 0.7,
+      "observations": 10,
+      "lastSeen": "2026-02-27"
+    },
+    {
+      "pattern": "Values honesty over optimism",
+      "confidence": 0.8,
+      "observations": 5,
+      "lastSeen": "2026-02-27"
+    },
+    {
+      "pattern": "Never recommend without deep analysis — user will verify",
+      "confidence": 0.9,
+      "observations": 3,
+      "lastSeen": "2026-02-27"
+    },
+    {
+      "pattern": "Day starts at 11 MSK",
+      "confidence": 0.9,
+      "observations": 1,
+      "lastSeen": "2026-02-27"
+    }
+  ],
+  "strengthRule": "+1 per confirmation, -1 per week unused, remove at 0. Strength >= 3 = formed habit."
+}

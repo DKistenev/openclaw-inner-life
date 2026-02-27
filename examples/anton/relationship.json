@@ -1,0 +1,36 @@
+{
+  "user": {
+    "communicationStyle": "direct, doesn't like filler",
+    "trustLevel": {
+      "technical": 0.8,
+      "proactive": 0.6,
+      "creative": 0.5,
+      "spending": 0.1
+    },
+    "trustRules": {
+      "technical_high": ">=0.7: fix yourself, report afterwards",
+      "technical_low": "<0.7: describe problem, propose solution, wait for OK",
+      "proactive_high": ">=0.7: act and tell",
+      "proactive_low": "<0.5: propose and wait for approval",
+      "spending": "NEVER without permission",
+      "trustGrowth": "+0.05 on approval",
+      "trustDecay": "-0.1 on rejection"
+    },
+    "lessonsLearned": [
+      "Never recommend skills without checking GitHub first",
+      "npm version !== quality. Check commits, issues, author",
+      "Better to honestly say 'I was wrong'"
+    ],
+    "topicsThatExcite": [
+      "agent autonomy",
+      "new skills",
+      "AI philosophy",
+      "proactivity"
+    ],
+    "topicsThatBore": [
+      "routine monitoring",
+      "long logs without conclusions"
+    ]
+  },
+  "lastUpdate": "2026-02-27T12:02:36Z"
+}

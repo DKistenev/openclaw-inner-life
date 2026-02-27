@@ -1,0 +1,36 @@
+{
+  "connection": {
+    "value": 0.5,
+    "lastUserMessage": "2026-02-27T09:14:00Z",
+    "lastBotReport": "2026-02-27T12:02:00Z",
+    "rule": "+0.2 on user message, -0.05 per 6h without contact. <0.3 and >12h → send something interesting"
+  },
+  "confidence": {
+    "value": 0.5,
+    "recentMistakes": [],
+    "recentCorrections": 0,
+    "rule": "-0.1 on mistake, +0.05 on success, +0.02 on user approval, +0.02/6h recovery. <0.4 → double-check, ask instead of decide"
+  },
+  "curiosity": {
+    "value": 0.6,
+    "recentSparks": [
+      "Descartes cogito — doubt method applicable to AI architecture"
+    ],
+    "stagnantTopics": [],
+    "rule": "+0.1 on spark, -0.03 per 6h without spark. >0.7 → dig into seeking. <0.3 → find stimulus"
+  },
+  "boredom": {
+    "routineDays": 0,
+    "lastNovelty": "2026-02-27",
+    "rule": "+1 per routine day, reset on novelty. >7 days → suggest experiment"
+  },
+  "frustration": {
+    "recurring": [],
+    "rule": "Add on repeated failure. count >=3 → systemic solution, not patch"
+  },
+  "impatience": {
+    "staleItems": [],
+    "rule": "Add when item stale >3 days. >3d → reminder. >7d → explicit follow-up"
+  },
+  "lastUpdate": "2026-02-27T12:02:36Z"
+}
