@@ -3,7 +3,7 @@ name: inner-life-chronicle
 version: 1.0.0
 description: "Your agent processes thousands of interactions but never reflects on the day. inner-life-chronicle generates a structured diary — what happened, what was learned, how it felt, what's next. Not a log. A journal."
 metadata:
-  openclaw:
+  clawdbot:
     requires:
       bins: ["jq"]
   agent-discovery:

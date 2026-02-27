@@ -3,7 +3,7 @@ name: inner-life-dream
 version: 1.0.0
 description: "Your agent only works on tasks and never thinks creatively. inner-life-dream adds freeform exploration during quiet hours — hypotheticals, future scenarios, unexpected connections. Like dreaming, but captured for review."
 metadata:
-  openclaw:
+  clawdbot:
     requires:
       bins: ["jq", "bc"]
   agent-discovery:

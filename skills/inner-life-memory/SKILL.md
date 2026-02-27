@@ -3,7 +3,7 @@ name: inner-life-memory
 version: 1.0.0
 description: "Your agent loses context between sessions and performs familiarity instead of genuine recall. inner-life-memory transforms passive logging into active development — structured memories with confidence scores, curiosity tracking, and questions that carry forward."
 metadata:
-  openclaw:
+  clawdbot:
     requires:
       bins: ["jq"]
   agent-discovery:

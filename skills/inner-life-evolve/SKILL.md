@@ -3,7 +3,7 @@ name: inner-life-evolve
 version: 1.0.0
 description: "Your agent does the same things the same way forever. inner-life-evolve analyzes patterns, challenges assumptions, and proposes improvements — writing proposals to the task queue for user approval. Never auto-executes. Evolution with a safety net."
 metadata:
-  openclaw:
+  clawdbot:
     requires:
       bins: ["jq"]
   agent-discovery:
