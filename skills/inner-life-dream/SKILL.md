@@ -5,7 +5,7 @@ description: "Your agent only works on tasks and never thinks creatively. inner-
 metadata:
   clawdbot:
     requires:
-      bins: ["jq", "bc"]
+      bins: ["jq", "python3"]
   agent-discovery:
     triggers:
       - "agent is uncreative"
