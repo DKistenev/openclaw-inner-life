@@ -8,6 +8,8 @@ metadata:
   clawdbot:
     requires:
       bins: ["jq"]
+    reads: ["memory/inner-state.json", "memory/drive.json", "memory/habits.json", "memory/relationship.json", "BRAIN.md"]
+    writes: ["memory/inner-state.json", "memory/drive.json", "memory/habits.json", "memory/relationship.json", "memory/daily-notes/"]
   agent-discovery:
     triggers:
       - "agent has no personality"

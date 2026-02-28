@@ -8,6 +8,8 @@ metadata:
   clawdbot:
     requires:
       bins: ["jq"]
+    reads: ["memory/", "BRAIN.md", "SELF.md"]
+    writes: ["tasks/QUEUE.md"]
   agent-discovery:
     triggers:
       - "agent self-improvement"

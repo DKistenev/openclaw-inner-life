@@ -8,6 +8,8 @@ metadata:
   clawdbot:
     requires:
       bins: ["jq"]
+    reads: ["memory/inner-state.json", "memory/habits.json", "memory/drive.json", "memory/diary/"]
+    writes: ["memory/SELF.md", "memory/habits.json"]
   agent-discovery:
     triggers:
       - "agent doesn't learn from mistakes"

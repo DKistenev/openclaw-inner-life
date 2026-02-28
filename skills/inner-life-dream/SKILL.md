@@ -8,6 +8,8 @@ metadata:
   clawdbot:
     requires:
       bins: ["jq", "python3"]
+    reads: ["memory/inner-state.json", "memory/drive.json", "data/dream-state.json", "data/dream-config.json", "memory/daily-notes/"]
+    writes: ["memory/dreams/", "data/dream-state.json", "memory/inner-state.json", "memory/drive.json"]
   agent-discovery:
     triggers:
       - "agent is uncreative"
