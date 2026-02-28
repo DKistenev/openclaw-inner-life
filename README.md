@@ -135,7 +135,7 @@ MIT — do whatever you want with it.
 
 ## Contributing
 
-Issues and PRs welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) if it exists.
+Issues and PRs welcome.
 
 ---
 
