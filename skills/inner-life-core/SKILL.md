@@ -1,6 +1,6 @@
 ---
 name: inner-life-core
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/DKistenev/openclaw-inner-life
 source: https://github.com/DKistenev/openclaw-inner-life/tree/main/skills/inner-life-core
 description: "Your agent forgets who you are between sessions. It gives the same responses every day. It doesn't grow. inner-life-core fixes that. Gives your OpenClaw agent emotions with half-life decay, a 9-step Brain Loop protocol, and structured state — the foundation for an inner life. Works standalone or with inner-life-* extension skills."

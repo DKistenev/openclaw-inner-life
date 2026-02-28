@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.4] — 2026-02-28
+
+### Added
+- **all skills**: Add `homepage` and `source` URLs to metadata (fixes ClawHub security scan provenance warnings)
+
 ## [1.0.3] — 2026-02-28
 
 ### Fixed

@@ -1,6 +1,6 @@
 ---
 name: inner-life-chronicle
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/DKistenev/openclaw-inner-life
 source: https://github.com/DKistenev/openclaw-inner-life/tree/main/skills/inner-life-chronicle
 description: "Your agent processes thousands of interactions but never reflects on the day. inner-life-chronicle generates a structured diary — what happened, what was learned, how it felt, what's next. Not a log. A journal."
