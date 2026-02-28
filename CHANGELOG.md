@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.2] — 2026-02-28
+
+### Fixed
+- **inner-life-dream**: Published fix to ClawHub — dice roll now uses Python `random.random()`
+
 ## [1.0.1] — 2026-02-28
 
 ### Fixed
