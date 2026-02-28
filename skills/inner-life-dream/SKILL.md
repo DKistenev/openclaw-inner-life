@@ -1,6 +1,6 @@
 ---
 name: inner-life-dream
-version: 1.0.0
+version: 1.0.2
 description: "Your agent only works on tasks and never thinks creatively. inner-life-dream adds freeform exploration during quiet hours — hypotheticals, future scenarios, unexpected connections. Like dreaming, but captured for review."
 metadata:
   clawdbot:

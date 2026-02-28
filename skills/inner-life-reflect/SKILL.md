@@ -1,6 +1,6 @@
 ---
 name: inner-life-reflect
-version: 1.0.0
+version: 1.0.1
 description: "Your agent repeats the same patterns without learning. inner-life-reflect adds self-reflection with trigger detection and quality gates — your agent observes its own behavior, notices shifts, and evolves its personality over time through SELF.md."
 metadata:
   clawdbot:
