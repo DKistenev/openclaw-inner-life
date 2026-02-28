@@ -1,9 +1,14 @@
 # Changelog
 
+## [1.0.3] — 2026-02-28
+
+### Fixed
+- **inner-life-dream**: Update `requires.bins` — replace `bc` with `python3` (caught by ClawHub security scan)
+
 ## [1.0.2] — 2026-02-28
 
 ### Fixed
-- **inner-life-dream**: Published fix to ClawHub — dice roll now uses Python `random.random()`
+- **inner-life-dream**: Published dice roll fix to ClawHub — uses Python `random.random()`
 
 ## [1.0.1] — 2026-02-28
 
