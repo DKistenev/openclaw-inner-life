@@ -1,6 +1,6 @@
 ---
 name: inner-life-evolve
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/DKistenev/openclaw-inner-life
 source: https://github.com/DKistenev/openclaw-inner-life/tree/main/skills/inner-life-evolve
 description: "Your agent does the same things the same way forever. inner-life-evolve analyzes patterns, challenges assumptions, and proposes improvements — writing proposals to the task queue for user approval. Never auto-executes. Evolution with a safety net."

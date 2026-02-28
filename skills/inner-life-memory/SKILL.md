@@ -1,6 +1,6 @@
 ---
 name: inner-life-memory
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/DKistenev/openclaw-inner-life
 source: https://github.com/DKistenev/openclaw-inner-life/tree/main/skills/inner-life-memory
 description: "Your agent loses context between sessions and performs familiarity instead of genuine recall. inner-life-memory transforms passive logging into active development — structured memories with confidence scores, curiosity tracking, and questions that carry forward."

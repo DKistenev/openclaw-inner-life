@@ -1,6 +1,6 @@
 ---
 name: inner-life-dream
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/DKistenev/openclaw-inner-life
 source: https://github.com/DKistenev/openclaw-inner-life/tree/main/skills/inner-life-dream
 description: "Your agent only works on tasks and never thinks creatively. inner-life-dream adds freeform exploration during quiet hours — hypotheticals, future scenarios, unexpected connections. Like dreaming, but captured for review."
