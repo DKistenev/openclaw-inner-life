@@ -65,12 +65,9 @@ if [ "$LAST_DATE" = "$TODAY" ] && [ "$DREAMS_TONIGHT" -ge "$MAX_DREAMS" ]; then
 fi
 
 # Check 3: Roll dice
-if [ "$DREAM_CHANCE" != "1.0" ] && [ "$DREAM_CHANCE" != "1" ]; then
-  ROLL=$(( RANDOM % 100 ))
-  THRESHOLD=$(echo "$DREAM_CHANCE * 100" | bc | cut -d. -f1)
-  if [ "$ROLL" -ge "${THRESHOLD:-100}" ]; then
-    exit 1
-  fi
+ROLL=$(python3 -c "import random; print(1 if random.random() < $DREAM_CHANCE else 0)" 2>/dev/null || echo "1")
+if [ "$ROLL" != "1" ]; then
+  exit 1
 fi
 
 # All checks passed — pick a topic
