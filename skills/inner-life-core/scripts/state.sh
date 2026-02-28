@@ -11,9 +11,19 @@ set -euo pipefail
 WORKSPACE="${OPENCLAW_WORKSPACE:-$(pwd)}"
 MEMORY_DIR="$WORKSPACE/memory"
 
+# Validate jq path to prevent injection.
+# Allows: .foo, .foo.bar, .foo[0], .["key"], .foo | .bar
+_validate_jq_path() {
+  if [[ ! "$1" =~ ^\.[][a-zA-Z0-9_.\"\ \|]+$ ]]; then
+    echo "error: invalid jq path: $1" >&2
+    return 1
+  fi
+}
+
 state_read() {
   local file="$MEMORY_DIR/$1"
   local path="$2"
+  _validate_jq_path "$path" || { echo "null"; return 1; }
   jq -r "$path" "$file" 2>/dev/null || echo "null"
 }
 
@@ -21,8 +31,9 @@ state_write() {
   local file="$MEMORY_DIR/$1"
   local path="$2"
   local value="$3"
+  _validate_jq_path "$path" || return 1
   local tmp
-  tmp=$(jq "$path = $value" "$file")
+  tmp=$(jq --argjson val "$value" "$path = \$val" "$file")
   echo "$tmp" > "$file"
 }
 

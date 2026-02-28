@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.6] — 2026-02-28
+
+### Security
+- **inner-life-core**: Fix shell injection vulnerability in `state.sh` — validate jq paths with allowlist regex, pass values via `--argjson` instead of string interpolation (fixes ClawHub suspicious classification)
+
 ## [1.0.5] — 2026-02-28
 
 ### Added
