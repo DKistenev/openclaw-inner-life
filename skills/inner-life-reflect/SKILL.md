@@ -1,6 +1,6 @@
 ---
 name: inner-life-reflect
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/DKistenev/openclaw-inner-life
 source: https://github.com/DKistenev/openclaw-inner-life/tree/main/skills/inner-life-reflect
 description: "Your agent repeats the same patterns without learning. inner-life-reflect adds self-reflection with trigger detection and quality gates — your agent observes its own behavior, notices shifts, and evolves its personality over time through SELF.md."
@@ -29,6 +29,15 @@ metadata:
 > Self-reflection that actually works. No forced journaling, no filler.
 
 Requires: **inner-life-core**
+
+## Prerequisites Check
+
+Before using this skill, verify that inner-life-core has been initialized:
+
+1. Check that `memory/inner-state.json` exists
+2. Check that `memory/habits.json` exists
+
+If either is missing, tell the user: *"inner-life-core is not initialized. Install it with `clawhub install inner-life-core` and run `bash skills/inner-life-core/scripts/init.sh`."* Do not proceed without these files.
 
 ## What This Solves
 

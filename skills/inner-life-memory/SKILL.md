@@ -1,6 +1,6 @@
 ---
 name: inner-life-memory
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/DKistenev/openclaw-inner-life
 source: https://github.com/DKistenev/openclaw-inner-life/tree/main/skills/inner-life-memory
 description: "Your agent loses context between sessions and performs familiarity instead of genuine recall. inner-life-memory transforms passive logging into active development — structured memories with confidence scores, curiosity tracking, and questions that carry forward."
@@ -29,6 +29,15 @@ metadata:
 > Transform passive logging into active development.
 
 Requires: **inner-life-core**
+
+## Prerequisites Check
+
+Before using this skill, verify that inner-life-core has been initialized:
+
+1. Check that `memory/inner-state.json` exists
+2. Check that `memory/drive.json` exists
+
+If either is missing, tell the user: *"inner-life-core is not initialized. Install it with `clawhub install inner-life-core` and run `bash skills/inner-life-core/scripts/init.sh`."* Do not proceed without these files.
 
 ## What This Solves
 

@@ -11,6 +11,16 @@ MEMORY_DIR="$WORKSPACE/memory"
 STATE_FILE="$DATA_DIR/dream-state.json"
 CONFIG_FILE="$DATA_DIR/dream-config.json"
 
+# Check: inner-life-core must be initialized
+if [ ! -f "$MEMORY_DIR/inner-state.json" ]; then
+  echo "ERROR: inner-life-core not initialized. Run: bash skills/inner-life-core/scripts/init.sh" >&2
+  exit 1
+fi
+if [ ! -d "$MEMORY_DIR/dreams" ]; then
+  echo "ERROR: memory/dreams/ directory missing. Run: bash skills/inner-life-core/scripts/init.sh" >&2
+  exit 1
+fi
+
 # Defaults
 QUIET_START=23  # 11 PM
 QUIET_END=7     # 7 AM
@@ -41,6 +51,12 @@ DREAMS_TONIGHT=$(jq -r '.dreamsTonight' "$STATE_FILE")
 MAX_DREAMS=$(jq -r '.maxDreamsPerNight' "$STATE_FILE")
 DREAM_CHANCE=$(jq -r '.dreamChance' "$STATE_FILE")
 
+# Validate DREAM_CHANCE is a number (prevent code injection)
+if ! [[ "$DREAM_CHANCE" =~ ^[0-9]*\.?[0-9]+$ ]]; then
+  echo "WARNING: Invalid dreamChance value '$DREAM_CHANCE', defaulting to 1.0" >&2
+  DREAM_CHANCE="1.0"
+fi
+
 # Check 1: Are we in quiet hours?
 HOUR=$(date +%H | sed 's/^0//')
 if [ "$QUIET_START" -gt "$QUIET_END" ]; then
@@ -65,7 +81,7 @@ if [ "$LAST_DATE" = "$TODAY" ] && [ "$DREAMS_TONIGHT" -ge "$MAX_DREAMS" ]; then
 fi
 
 # Check 3: Roll dice
-ROLL=$(python3 -c "import random; print(1 if random.random() < $DREAM_CHANCE else 0)" 2>/dev/null || echo "1")
+ROLL=$(python3 -c "import sys,random; print(1 if random.random() < float(sys.argv[1]) else 0)" "$DREAM_CHANCE" 2>/dev/null || echo "1")
 if [ "$ROLL" != "1" ]; then
   exit 1
 fi

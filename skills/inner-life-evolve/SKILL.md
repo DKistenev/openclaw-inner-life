@@ -1,6 +1,6 @@
 ---
 name: inner-life-evolve
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/DKistenev/openclaw-inner-life
 source: https://github.com/DKistenev/openclaw-inner-life/tree/main/skills/inner-life-evolve
 description: "Your agent does the same things the same way forever. inner-life-evolve analyzes patterns, challenges assumptions, and proposes improvements — writing proposals to the task queue for user approval. Never auto-executes. Evolution with a safety net."
@@ -30,6 +30,16 @@ metadata:
 > Evolution is not optional. But it requires permission.
 
 Requires: **inner-life-core**
+
+## Prerequisites Check
+
+Before using this skill, verify that inner-life-core has been initialized:
+
+1. Check that `memory/inner-state.json` exists
+2. Check that `BRAIN.md` exists
+3. Check that `tasks/QUEUE.md` exists
+
+If any are missing, tell the user: *"inner-life-core is not initialized. Install it with `clawhub install inner-life-core` and run `bash skills/inner-life-core/scripts/init.sh`."* Do not proceed without these files.
 
 ## What This Solves
 
