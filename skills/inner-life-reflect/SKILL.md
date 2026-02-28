@@ -1,6 +1,8 @@
 ---
 name: inner-life-reflect
 version: 1.0.1
+homepage: https://github.com/DKistenev/openclaw-inner-life
+source: https://github.com/DKistenev/openclaw-inner-life/tree/main/skills/inner-life-reflect
 description: "Your agent repeats the same patterns without learning. inner-life-reflect adds self-reflection with trigger detection and quality gates — your agent observes its own behavior, notices shifts, and evolves its personality over time through SELF.md."
 metadata:
   clawdbot:
